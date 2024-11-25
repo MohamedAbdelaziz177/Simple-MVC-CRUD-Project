@@ -1,0 +1,97 @@
+﻿
+
+@model Student
+<html>
+	<head>
+	</head>
+	<body>
+		<div class="container">
+
+		
+		<form method="post" action="/Student/SaveNewUser"> 
+
+			<label for="id">StudentId: </label>
+			<br>
+			<input type="text" name="StudetId" id="id" value="@Model.StudetId"></input>
+
+			<br><br>
+
+		    <label for="name">StudentName:  </label>
+			<br>
+			<input type="text" name="StdName" id="name" value="@Model.StdName"></input>
+		    <br><br>
+
+		    <label for="phone">StudentPhone:  </label>
+			<br>
+			<input type="text" name="StdPhone" id="phone" value="@Model.StdPhone"></input>
+		    <br><br>
+
+			<label for="address">StudentAddress: </label>
+			<br>
+			<input type="text" name="StdAddress" id="address" value="@Model.StdAddress"></input>
+		    <br><br>
+
+
+			<input type="submit" class="a"></input>
+		</form>
+	</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	.container {
+		width: 80%;
+		height: 70%;
+		
+		
+		padding-bottom: 5%;
+		
+	}
+
+	form {
+		padding-left: 22%;
+		padding-top: 10%;
+	}
+
+		form input {
+			width: 80%;
+			height: 40px;
+			border: none;
+			border-bottom: 1px solid green;
+			background-color: rgba(88,88,88,0.12);
+			color: black;
+		}
+
+		form input:hover {
+				border: 4px solid green;
+		}
+
+
+	.a {
+		width: 100%;
+		background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+		.a:hover {
+			background-color: #45a049;
+		}
+
+	
+</style>

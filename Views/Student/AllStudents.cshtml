@@ -1,0 +1,49 @@
+﻿@model List<DemoMvc.Models.Student>
+
+<table>
+	<tr>
+		<th>ID</th>	
+		<th>Name</th>
+		<th>Addresss</th>
+		<th>Edit ?</th>
+		<th>Delete ?</th>
+
+	</tr>
+	@foreach(var item in Model)
+	{
+		<tr>
+			<td>@item.StudetId</td>
+			<td>@item.StdName</td>
+			<td>@item.StdAddress</td>
+			<td><a href="/Student/EditStudent/@item.StudetId">Edit</a></td>
+			<td><a href="/Student/DeleteStudent/@item.StudetId">Delete</a></td>
+
+
+		</tr>
+	}
+	
+</table>
+
+
+<br><br>
+<a href="/Student/ShowRegForm"> add new ? </a>
+
+
+
+
+
+
+<style>
+	table {
+	 
+	  width: 100%;
+	}
+	th, td {
+	  border: 1px solid black;
+	  padding: 8px;
+	  text-align: left;
+	}
+	th {
+	  background-color: #f2f2f2;
+	}
+</style>
