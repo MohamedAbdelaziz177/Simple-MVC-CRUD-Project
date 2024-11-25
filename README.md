@@ -17,42 +17,12 @@ This is a simple MVC CRUD application built using ASP.NET Core 8.0. It allows us
 - **Framework**: ASP.NET Core 8.0
 - **Language**: C#
 - **Database**: My SQL
-- **Frontend**: Razor Pages 
+- **ORM**: Entity Framework core 8
+- **Frontend**: Razor Pages, HTML and CSS
 - **IDE**: Visual Studio
 
-## Setup and Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/your-repository.git
-   cd your-repository
-   ```
-
-2. Open the project in your preferred IDE.
-
-3. Restore the dependencies:
-   ```bash
-   dotnet restore
-   ```
-
-4. Update the database connection string in `appsettings.json` to match your database configuration:
-   ```json
-   "ConnectionStrings": {
-       "DefaultConnection": "Server=your_server;Database=your_database;Trusted_Connection=True;MultipleActiveResultSets=true"
-   }
-   ```
-
-5. Apply migrations and seed the database (if applicable):
-   ```bash
-   dotnet ef database update
-   ```
-
-6. Run the application:
-   ```bash
-   dotnet run
-   ```
-
-7. Navigate to `http://localhost:5000` (or the port specified in your configuration).
+ 
 
 ## How to Use
 
