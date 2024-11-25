@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # Student Management System (CRUD Application)
 
 This is a simple MVC CRUD application built using ASP.NET Core 8.0. It allows users to perform basic operations for managing student data, including adding, updating, retrieving, and deleting records from a database.
