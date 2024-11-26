@@ -37,8 +37,11 @@ namespace DemoMvc.Controllers
 		[HttpPost]
 		public IActionResult SaveNewUser(Student st)
 		{
-			if(st.StdName != null)
+			var check = con.Students.FirstOrDefault(x => x.StudetId == st.StudetId);
+			if (check == null && st.StdName != null)
 			{
+
+			
 				con.Students.Add(st);
 				con.SaveChanges();
 
@@ -120,6 +123,7 @@ namespace DemoMvc.Controllers
 		}
 
 
+		
 
 	}
 }
