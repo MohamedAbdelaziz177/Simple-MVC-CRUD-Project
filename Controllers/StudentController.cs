@@ -35,6 +35,9 @@ namespace DemoMvc.Controllers
 		// Recieve the data from the client and save it
 
 		[HttpPost]
+		//[AutoValidateAntiforgeryToken]
+
+		[AutoValidateAntiforgeryToken]
 		public IActionResult SaveNewUser(Student st)
 		{
 			var check = con.Students.FirstOrDefault(x => x.StudetId == st.StudetId);
@@ -68,6 +71,8 @@ namespace DemoMvc.Controllers
 		}
 
 		[HttpPost]
+
+	//	[AutoValidateAntiforgeryToken]
 		public IActionResult SaveChanges(Student st)
 		{
 			var isExisted = con.Students.FirstOrDefault(x => x.StudetId == st.StudetId);                          
@@ -108,6 +113,8 @@ namespace DemoMvc.Controllers
 		// recieve the id and show the student
 
 		[HttpPost]
+		//[AutoValidateAntiforgeryToken]
+
 		public IActionResult GetStudentHimself(int id)
 		{
 			
@@ -121,6 +128,9 @@ namespace DemoMvc.Controllers
 			else return View("Home");
 			
 		}
+
+
+		public IActionResult ShowStudentHome() { return View("Home"); }
 
 
 		

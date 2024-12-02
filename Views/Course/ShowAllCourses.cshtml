@@ -1,0 +1,42 @@
+﻿@model List<CourseForUser>
+
+
+	<h1 class="align-content-center">All the Courses</h1>
+	<br></br>
+
+
+<table class="table">
+	<tr>
+		<th>CourseId</th>
+		<th>CrsName</th>
+		<th>CrsCategory</th>
+		<th>FullMark</th>
+		<th>Instructor</th>
+		<th>reference</th>
+		<th>EDIT?</th>
+		<th>DELETE?</th>
+		
+	</tr>
+
+	@foreach (var e in Model)
+	{
+		<tr>
+			
+			<td>@e.CourseId</td>
+			<td>@e.CrsName</td>
+			<td>@e.CrsCategory</td>
+			<td>@e.FullMark</td>
+			<td>@e.inst</td>
+			<td>@e.reference</td>
+
+			<td><a asp-controller="Course" asp-action="EditCourse" asp-route-id="@e.CourseId">Edit</a></td>
+			<td><a asp-controller="Course" asp-action="RemoveCourse" asp-route-id="@e.CourseId">Remove</a></td>
+
+
+		
+
+
+		</tr>
+	}
+</table>
+<a asp-action="AddNewCourse" asp-controller="Course">Add new ?</a>

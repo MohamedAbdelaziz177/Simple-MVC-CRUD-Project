@@ -1,0 +1,11 @@
+﻿
+@model Cousre
+@{
+	List<Cousre> IdLst = ViewBag.IdLst;
+	SelectList Idies = new SelectList(IdLst, "CourseId", "CrsName");
+}
+<form asp-action="GetCourseByName" asp-controller = "Course" class="form-control">
+	<label asp-for="CourseId" class="form-label">Enter Name</label>
+	<select asp-for="CourseId" class="form-control" asp-items="Idies"></select>
+	<input type="submit" class="btn-success"></input>
+</form>

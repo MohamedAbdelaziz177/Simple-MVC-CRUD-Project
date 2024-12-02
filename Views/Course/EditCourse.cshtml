@@ -1,0 +1,70 @@
+﻿@model Cousre
+
+@{
+	SelectList instructors = new SelectList(ViewBag.instructors, "InstructorId", "InstName");
+	SelectList References = new SelectList(ViewBag.refs, "RefId", "RefName");
+}
+
+
+<form method="post" asp-action="SaveEdit" asp-controller="Course"  class="form-control">
+
+	<h1 class="text-center"> Add Course! </h1>
+	<label asp-for="CourseId" class="form-label"></label>
+
+
+		<input asp-for="CourseId" class="form-control" readonly></input>
+	
+
+
+	<br>
+	<label asp-for="CrsName" class="form-label"></label>
+	<input asp-for="CrsName" class="form-control" readonly></input>
+	<span asp-validation-for="CrsName" class="text-danger"></span>
+
+	<br>
+	<label asp-for="Hours" class="form-label"></label>
+	<input asp-for="Hours" class="form-control"></input>
+	<span asp-validation-for="Hours" class="text-danger"></span>
+
+	<br>
+	<label asp-for="FullMark" class="form-label"></label>
+	<input asp-for="FullMark" class="form-control"></input>
+	<span asp-validation-for="FullMark" class="text-danger"></span>
+
+	<br>
+	<label asp-for="CrsCategory"></label>
+	<select asp-for="CrsCategory" class="form-control">
+
+		<option class="form-control" selected disabled>Select Category</option>
+		<option class="form-control">Programming</option>
+		<option class="form-control">UI-UX</option>
+		<option class="form-control">AI</option>
+
+	</select>
+
+
+	<br>
+	<label asp-for="InstructorId"></label>
+	<select asp-for="InstructorId" class="form-control" asp-items="instructors">
+		<option class="form-control" value="0" selected disabled>Select Instructor: </option>
+	</select>
+
+	<br>
+	<label asp-for="ReferenceRefId"></label>
+	<select asp-for="ReferenceRefId" class="form-control" asp-items="References">
+		<option class="form-control" value="0" selected disabled>Select Course Reference: </option>
+	</select>
+
+	<br><br>
+	<input type="submit" class="btn-success"></input>
+
+
+
+
+</form>
+
+@section Scripts {
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}
