@@ -37,7 +37,7 @@ namespace DemoMvc.Controllers
 		[HttpPost]
 		//[AutoValidateAntiforgeryToken]
 
-		[AutoValidateAntiforgeryToken]
+		
 		public IActionResult SaveNewUser(Student st)
 		{
 			var check = con.Students.FirstOrDefault(x => x.StudetId == st.StudetId);
