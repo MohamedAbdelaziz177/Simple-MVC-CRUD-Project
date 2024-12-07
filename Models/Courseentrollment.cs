@@ -9,12 +9,13 @@ public partial class Courseentrollment
 {
     [Required]
     [Display(Name = "Enter Crs ID")]
-    [Remote("ValidateCrsID", "Enrollment", ErrorMessage = "Enter Existed ID")]
+    [ExistedCrs(ErrorMessage = "Not existed in Server")]
     public int CousreCourseId { get; set; }
 
 	[Required]
 	[Display(Name = "Enter Std ID")]
 	[Remote("ValidateStdID", "Enrollment", ErrorMessage = "Enter Existed ID")]
+	[ExistedStd(ErrorMessage = "Not existed in Server")]
 
 	public int StudentStudetId { get; set; }
 

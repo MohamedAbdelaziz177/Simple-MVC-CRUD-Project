@@ -7,11 +7,14 @@
 	<input class="form-control" asp-for="CousreCourseId"></input>
 	<span asp-validation-for="CousreCourseId" class="text-danger"></span>
 
-	
+	<br></br>
 
 	<label asp-for="StudentStudetId" class="form-label"></label>
 	<input class="form-control" asp-for="StudentStudetId"></input>
 	<span asp-validation-for="StudentStudetId" class="text-danger"></span>
+
+	<br></br>
+
 
 	<label asp-for="Degree" class="form-label"></label>
 	<input class="form-control" asp-for="Degree"></input>
@@ -21,3 +24,9 @@
 
 </form>
 
+@section scripts{
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
