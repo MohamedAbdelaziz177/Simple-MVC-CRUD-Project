@@ -5,5 +5,50 @@
 
 
 <a href="/Course/ShowCourseHome" class="btn btn-primary">Manipulate Course</a>
+<br>
+<br>
+
+<a href="#" onclick="getEnrollForm()" class="btn btn-primary">Enroll For Course</a>
+<br>
+<br>
+
+
+
+
+<div id="form">
+
+</div>
+
+
+
+@section scripts{
+
+	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+	<script>
+
+		function getEnrollForm() {
+
+			event.preventDefault();
+
+
+			$.ajax(
+				{
+					url: "Enrollment/EnrollForCourse",
+					success: function (result) {
+						document.getElementById("form").innerHTML = result;
+					}
+				}
+			);
+		}
+
+		
+	</script>
+
+}
+
 
 

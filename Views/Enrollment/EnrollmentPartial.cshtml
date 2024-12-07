@@ -1,0 +1,23 @@
+﻿
+@model Courseentrollment
+
+<form class="form-control" asp-action="SaveEnroll" asp-controller="Enrollment" method="post">
+
+	<label asp-for="CousreCourseId" class="form-label"></label>
+	<input class="form-control" asp-for="CousreCourseId"></input>
+	<span asp-validation-for="CousreCourseId" class="text-danger"></span>
+
+	
+
+	<label asp-for="StudentStudetId" class="form-label"></label>
+	<input class="form-control" asp-for="StudentStudetId"></input>
+	<span asp-validation-for="StudentStudetId" class="text-danger"></span>
+
+	<label asp-for="Degree" class="form-label"></label>
+	<input class="form-control" asp-for="Degree"></input>
+	<span asp-validation-for="Degree" class="text-danger"></span>
+	<br><br>
+	<input type="submit" class="btn-success"></input>
+
+</form>
+
